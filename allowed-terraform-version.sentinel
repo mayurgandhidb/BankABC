@@ -3,16 +3,3 @@ import "tfplan"
 main = rule {
   tfplan.terraform_version matches "^(0\\.1(4|5)|1\\.0)\\.\\d+$"
 }
-
-import "tfplan-functions"
-
-allowed_types = ["t2.small", "t2.medium", "t2.large"]
-
-allEC2Instances = tfplan-functions.find_resources("aws_instance")
-
-violatingEC2Instances = tfplan-functions.filter_attribute_not_in_list(
-  allEC2Instances, "instance_type", allowed_types, true)
-  
-main = rule {
-  length(violatingEC2Instances["messages"]) is 0
-}
