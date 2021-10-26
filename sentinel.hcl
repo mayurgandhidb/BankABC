@@ -4,3 +4,6 @@ policy "allowed-terraform-version" {
 policy "aws-time" {
   enforcement_level = "hard-mandatory"
 }
+policy "aws-costing" {
+    enforcement_level = "advisory"
+}
