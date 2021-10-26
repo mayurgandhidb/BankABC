@@ -2,6 +2,6 @@ import "time"
 
 wd = time.now.weekday 
 
-print("checking to see if its Tuesday")
+print("checking to see if its Friday")
 
 main = rule {wd != 5}
