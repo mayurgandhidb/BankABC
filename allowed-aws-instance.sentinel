@@ -1,6 +1,6 @@
 import "tfplan-functions" as plan
 
-allowed_types = ["t2.small", "t2.medium", "t2.large"]
+allowed_types = ["t2.small", "t2.medium", "t2.large", "t2.micro"]
 
 allEC2Instances = plan.find_resources("aws_instance")
 
