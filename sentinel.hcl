@@ -7,3 +7,6 @@ policy "aws-time" {
 policy "aws-costing" {
     enforcement_level = "advisory"
 }
+policy "tags_enforced" {
+    enforcement_level = "hard-mandatory"
+}
