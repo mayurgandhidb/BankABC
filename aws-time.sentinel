@@ -1,0 +1,7 @@
+Import "time"
+
+wd = time.now.weekday 
+
+print("checnking to see if its Tuesday")
+
+main = rule { wd != 2}
