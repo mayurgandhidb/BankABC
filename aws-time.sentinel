@@ -4,4 +4,4 @@ wd = time.now.weekday
 
 print("checking to see if its Friday")
 
-main = rule {wd != 3}
+main = rule {wd != 1}
